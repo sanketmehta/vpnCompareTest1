@@ -80,27 +80,27 @@ def simpleCompareData():
     return jsonify(list1)
 
 
-# Route to get the metadata for a specific VPN
-@app.route('/vpnData/<vpnName>', methods=['POST','GET'])
-def vpnData(vpnName):
+# # Route to get the metadata for a specific VPN
+# @app.route('/vpnData/<vpnName>', methods=['POST','GET'])
+# def vpnData(vpnName):
 
-    results = session.query(vpnMaster).filter(vpnMaster.VPN_SERVICE == vpnName).all()
+#     results = session.query(vpnMaster).filter(vpnMaster.VPN_SERVICE == vpnName).all()
 
-    dict1 = {}
-    for k,v in results[0].__dict__.items():
-        if(("$" in k) or ("#" in k)):
-            if(("$" in k)):
-                k = "Dollar" + k[1:]
-            else:
-                k = "Number" + k[1:]
+#     dict1 = {}
+#     for k,v in results[0].__dict__.items():
+#         if(("$" in k) or ("#" in k)):
+#             if(("$" in k)):
+#                 k = "Dollar" + k[1:]
+#             else:
+#                 k = "Number" + k[1:]
         
-        if(("_sa_instance_state" != k)):
-            if('index' in k or 'Unnamed:_10' in k or 'index' in k):
-                pass
-            else:
-                dict1[k] = v
+#         if(("_sa_instance_state" != k)):
+#             if('index' in k or 'Unnamed:_10' in k or 'index' in k):
+#                 pass
+#             else:
+#                 dict1[k] = v
 
-    return jsonify(dict1)
+#     return jsonify(dict1)
 
 
 # Route to get the all/defined columns data 
