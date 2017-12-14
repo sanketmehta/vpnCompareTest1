@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+
+<head>	
+	<meta charset='utf-8'>
+  	<meta name="viewport" content="width=device-width, initial-scale=1">
+		
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+	<link rel="stylesheet" href="../static/d3bubble.css">
+	
+	<!-- d3 scripts -->
+	<script src="https://d3js.org/d3.v4.js"></script>
+	<script src="https://d3js.org/d3-queue.v3.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/d3-tip/0.7.1/d3-tip.min.js"></script>
+</head>
+
+<body>
+	<div class="container-fluid">
+		<div class="container-fluid">
+			<div class="row">
+				<div class="panel panel-default">
+					<div class="panel-body" >											
+						<div class="navbar-form navbar-left">				  
+						  <div class="form-group">				  	
+						  	<!-- <button class="btn btn-primary btn-md" id="allvpn">All VPN</button> -->
+						  	<button class="btn btn-primary btn-md" id="allvpn">Reset</button>
+						  </div>
+						  <div class="form-group">
+							  <label for="JurisdictionDropdown" class="dropdownlabel">Jurisdiction: </label>
+							  <select class="form-control dropdown" id="JurisdictionDropdown" >
+							  </select>
+						  </div>
+						  <div class="form-group">
+							  <label for="LoggingDropdown" class="dropdownlabel">Logging: </label>
+							  <select class="form-control dropdown" id="LoggingDropdown" >
+							  </select>
+						  </div>
+						  <div class="form-group">
+							  <label for="ActivismDropdown" class="dropdownlabel">Activism: </label>
+							  <select class="form-control dropdown" id="ActivismDropdown" >
+							  </select>
+						  </div>
+						  <div class="form-group">
+							  <label for="ServiceConfigDropdown" class="dropdownlabel">Service Config</label>
+							  <select class="form-control dropdown" id="ServiceConfigDropdown" >
+							  </select>
+						  </div>
+						  <div class="form-group">
+							  <label for="SecurityDropdown" class="dropdownlabel">Security</label>
+							  <select class="form-control dropdown" id="SecurityDropdown" >
+							  </select>
+						  </div>
+						  <div class="form-group">
+							  <label for="AvailabilityDropdown" class="dropdownlabel">Availability</label>
+							  <select class="form-control dropdown" id="AvailabilityDropdown" >
+							  </select>
+						  </div>
+						  <div class="form-group">
+							  <label for="WebsiteDropdown" class="dropdownlabel">Website</label>
+							  <select class="form-control dropdown" id="WebsiteDropdown" >
+							  </select>
+						  </div>
+						  <div class="form-group">
+							  <label for="PricingDropdown" class="dropdownlabel">Pricing</label>
+							  <select class="form-control dropdown" id="PricingDropdown" >
+							  </select>
+						  </div>
+						  <div class="form-group">
+							  <label for="EthicsDropdown" class="dropdownlabel">Ethics</label>
+							  <select class="form-control dropdown" id="EthicsDropdown" >
+							  </select>
+						  </div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-xs-6 col-md-10">
+					<div class="chart">
+
+					</div>
+				</div>
+				<div class="col-xs-3  col-md-2">
+	  				<div id="metabox" class="panel panel-primary">
+						<div id="metahead" class="panel-heading text-center">
+							<p>VPN Summary</p>							
+	  					</div>
+	  					<div class="panel-body" id="metadata">
+	  					</div>
+	  				</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- <script src="{{url_for('static', filename='d3bubble.js')}}" type="text/javascript"></script> -->
+	<script type='text/javascript' src='../static/d3bubble.js'></script>
+</body>
+
+</html>
